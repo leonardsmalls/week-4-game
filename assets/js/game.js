@@ -71,7 +71,7 @@
             counter++;
 
             if (counter == crystals.length) {
-                clearInterval(float);
+                clearInterval(floater);
             }
         };
 
