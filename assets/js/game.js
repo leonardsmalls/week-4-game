@@ -23,7 +23,7 @@
             floater;
             yourScore = 0;
             goal.textContent = goalTotal;
-            score.textContent = 0;
+            score.textContent = yourScore;
         },
         startGame = function() {
             goal.textContent = 0;
