@@ -20,7 +20,6 @@
             return points;
         },
         buildGame = function() {
-            float;
             yourScore = 0;
             goal.textContent = goalTotal;
             score.textContent = 0;
