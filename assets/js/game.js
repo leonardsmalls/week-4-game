@@ -69,7 +69,7 @@
             crystals[counter].classList.add('float');
             counter++;
 
-            if (counter === crystals.length) {
+            if (counter == crystals.length) {
                 clearInterval(float);
             }
         };
