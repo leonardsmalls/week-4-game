@@ -62,8 +62,8 @@
             }
         },
         removeScoreShow = function(c, p) {
-            p.classList.toggle('show-points');
             c.classList.toggle('no-click');
+            p.classList.toggle('show-points');
         },
         makeFloat = function() {
             crystals[counter].classList.add('float');
@@ -80,8 +80,8 @@
                 poin = this.children[0];
 
             yourScore += parseInt(crys.innerText);
-            poin.classList.toggle('show-points');
             crys.classList.toggle('no-click');
+            poin.classList.toggle('show-points');
             setTimeout(function() {
                 removeScoreShow(crys, poin);
             }, 400);
