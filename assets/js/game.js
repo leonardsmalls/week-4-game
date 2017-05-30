@@ -10,9 +10,7 @@
         }, 250),
         generateGameTotal = function() {
             goalTotal = Math.floor(Math.random() * 100);
-            if (goalTotal < 30) {
-                generateGameTotal();
-            }
+            (goalTotal < 30) ? generateGameTotal() : return goalTotal;
         },
         generateCrystalPoints = function() {
             let points = Math.floor(Math.random() * goalTotal / crystals.length);
