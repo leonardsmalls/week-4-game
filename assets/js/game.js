@@ -75,7 +75,7 @@
         };
 
     for (var i = 0; i < crystals.length; i++) {
-        crystals[i].addEventListener('click', function(e) {
+        crystals[i].addEventListener('click', function() {
             let crys = this,
                 poin = this.children[0];
 
