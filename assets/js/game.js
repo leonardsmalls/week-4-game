@@ -21,8 +21,8 @@
         },
         buildGame = function() {
             floater;
-            yourScore = 0;
             goal.textContent = goalTotal;
+            yourScore = 0;
             score.textContent = yourScore;
         },
         startGame = function() {
