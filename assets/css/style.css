@@ -1,160 +1,177 @@
 body {
-    	text-align: center;
-    	margin: 0 auto;
-    	padding: 20px 50px;
-    	font-family: Arial;
-    }
-    p {
-    	line-height: 1.2;
-    	margin-top: 0;
-    	font-size: 14px;
-    }
-    hr {
-    	width: 62%;
-    }
-    .body-wrapper {
-    	width: 60%;
-    	margin: 0 auto;
-    }
-    .row.instructions {
-    	width: 60%;
-    	text-align: justify;
-    	margin: 0 auto;
-    	border:1px solid #000;
-    	padding: 10px;
-    }
-    .row.instructions p {
-    	margin-bottom: 0;
-    }
-    .wins {
-    	margin-right: 10%;
-    	display: inline;
-    }
-    .losses {
-    	display: inline;
-    }
-    .row.stats,
-    .row.score {
-    	padding: 10px;
-    	margin: 50px auto;
-    	display: block;
-	    width: 30%;
-	    text-align: center;
-	    clear: both;
-	    min-height: 20px;
-	    font-size: 20px;
-    }
-    .goal {
-    	display: inline;
-    	margin-right: 10%;
-    }
-    .your-score {
-    	display: inline;
-    }
-    .row.crystals {
-		display: inline;
-		position: relative;
-		top: 30px;
-    }
-    .crystal {
-    	display: inline-block;
-        width: 0;
-        height: 0px;
-        border: 50px solid transparent;
-        border-bottom-width: 50px;
-        border-bottom-style: solid;
-        border-bottom-color: transparent;
-        position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 50px;
+    font-family: Arial;
+}
+
+p {
+    line-height: 1.2;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+hr {
+    width: 62%;
+    color: transparent;
+    border-bottom: 1px dotted #000;
+}
+
+.body-wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.row.instructions {
+    width: 60%;
+    text-align: justify;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.row.instructions p {
+    margin-bottom: 0;
+}
+
+.wins {
+    margin-right: 10%;
+    display: inline;
+}
+
+.losses {
+    display: inline;
+}
+
+.row.stats,
+.row.score {
+    padding: 10px;
+    margin: 50px auto;
+    display: block;
+    width: 30%;
+    text-align: center;
+    clear: both;
+    min-height: 20px;
+    font-size: 20px;
+}
+
+.goal {
+    display: inline;
+    margin-right: 10%;
+}
+
+.your-score {
+    display: inline;
+}
+
+.row.crystals {
+    display: inline;
+    position: relative;
+    top: 30px;
+}
+
+.crystal {
+    display: inline-block;
+    width: 0;
+    height: 0px;
+    border: 50px solid transparent;
+    border-bottom-width: 50px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    position: relative;
+    top: 0;
+    opacity: 0.65;
+    margin: 0 20px 50px;
+}
+
+.crystal.float {
+    animation: float 4s infinite;
+}
+
+.crystal:hover {
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {
         top: 0;
+        box-shadow: 0 115px 20px -27px rgba(150, 150, 150, 0.1);
         opacity: 0.65;
-        margin: 0 20px 50px;
     }
+    40% {
+        top: 10px;
+        box-shadow: 0 110px 15px -33px rgba(50, 50, 50, 0.7);
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        box-shadow: 0 115px 20px -27px rgba(150, 150, 150, 0.1);
+        opacity: 0.65;
+    }
+}
 
-    .crystal.float {
-    	animation: float 4s infinite;
-    }
+.crystal:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 19px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+}
 
-    .crystal:hover {
-    	cursor: pointer;
-    }
+.crystal:nth-of-type(1) {
+    border-bottom: 20px solid red;
+}
 
-    @keyframes float {
-    	0% {
-    		top:0;
-    		box-shadow: 0 115px 20px -27px rgba(150, 150, 150, 0.1);
-    		opacity: 0.65;
-    	}
-    	40% {
-			top: 10px;
-			box-shadow: 0 110px 15px -33px rgba(50, 50, 50, 0.7);
-			opacity: 1;
-    	}
-    	100% {
-    		top:0;
-    		box-shadow: 0 115px 20px -27px rgba(150, 150, 150, 0.1);
-    		opacity: 0.65;
-    	}
-    }
-    
-    .crystal:after {
-        content: '';
-        position: absolute;
-        left: -50px;
-        top: 19px;
-        width: 0;
-        height: 0;
-        border: 50px solid transparent;
-    }
-    
-    .crystal:nth-of-type(1) {
-        border-bottom: 20px solid red;
-    }
-    
-    .crystal:nth-of-type(1):after {
-        border-top: 70px solid red;
-    }
-    
-    .crystal:nth-of-type(2) {
-        border-bottom: 20px solid blue;
-    }
-    
-    .crystal:nth-of-type(2):after {
-        border-top: 70px solid blue;
-    }
-    
-    .crystal:nth-of-type(3) {
-        border-bottom: 20px solid green;
-    }
-    
-    .crystal:nth-of-type(3):after {
-        border-top: 70px solid green;
-    }
-    
-    .crystal:nth-of-type(4) {
-        border-bottom: 20px solid yellow;
-    }
-    
-    .crystal:nth-of-type(4):after {
-        border-top: 70px solid yellow;
-    }
-    .crystal p {
-    	margin-top: 0;
-    	margin-left: -5px;
-    	font-size: 20px;
-    	opacity: 0;
-    	transition: 1s all;
-    	position: absolute;
-    }
-    .crystal p.show-points {
-		text-align: center;
-		width: 100%;
-    	margin-top: -40px;
-    	margin-left: -10px;
-    	opacity: 1;
-    	font-size: 36px;
-    	transition: 1s all;
-    }
-    .no-click {
-    	pointer-events: none;
-    	cursor: default;
-    }
+.crystal:nth-of-type(1):after {
+    border-top: 70px solid red;
+}
+
+.crystal:nth-of-type(2) {
+    border-bottom: 20px solid blue;
+}
+
+.crystal:nth-of-type(2):after {
+    border-top: 70px solid blue;
+}
+
+.crystal:nth-of-type(3) {
+    border-bottom: 20px solid green;
+}
+
+.crystal:nth-of-type(3):after {
+    border-top: 70px solid green;
+}
+
+.crystal:nth-of-type(4) {
+    border-bottom: 20px solid yellow;
+}
+
+.crystal:nth-of-type(4):after {
+    border-top: 70px solid yellow;
+}
+
+.crystal p {
+    margin-top: 0;
+    margin-left: -5px;
+    font-size: 20px;
+    opacity: 0;
+    transition: 1s all;
+    position: absolute;
+}
+
+.crystal p.show-points {
+    text-align: center;
+    width: 100%;
+    margin-top: -40px;
+    margin-left: -10px;
+    opacity: 1;
+    font-size: 36px;
+    transition: 1s all;
+}
+
+.no-click {
+    pointer-events: none;
+    cursor: default;
+}
