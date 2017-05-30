@@ -5,7 +5,7 @@
         goalTotal = 0,
         yourScore = 0,
         counter = 0,
-        float = setInterval(function() {
+        floater = setInterval(function() {
             makeFloat();
         }, 250),
         generateGameTotal = function() {
@@ -20,6 +20,7 @@
             return points;
         },
         buildGame = function() {
+            floater;
             yourScore = 0;
             goal.textContent = goalTotal;
             score.textContent = 0;
