@@ -1,2 +1,2 @@
 # week-4-game
-#./index.html
+[Contribution guidelines for this project](./index.html)
